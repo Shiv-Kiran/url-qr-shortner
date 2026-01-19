@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/yourusername/url-qr-shortner/internal/models"
+	"github.com/Shiv-Kiran/url-qr-shortner/internal/models"
 )
 
 var db *sql.DB

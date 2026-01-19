@@ -1,4 +1,4 @@
-module github.com/yourusername/url-qr-shortner
+module github.com/Shiv-Kiran/url-qr-shortner
 
 go 1.21
 

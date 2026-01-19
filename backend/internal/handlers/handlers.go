@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/yourusername/url-qr-shortner/internal/database"
+	"github.com/Shiv-Kiran/url-qr-shortner/internal/database"
 	"github.com/yourusername/url-qr-shortner/internal/services"
 )
 
