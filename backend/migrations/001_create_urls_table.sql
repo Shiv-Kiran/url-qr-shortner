@@ -1,10 +1,11 @@
 CREATE TABLE IF NOT EXISTS urls (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    original_url VARCHAR(2048) NOT NULL,
-    short_code VARCHAR(50) UNIQUE NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    expires_at TIMESTAMP NULL,
-    clicks BIGINT DEFAULT 0,
-    INDEX idx_short_code (short_code),
-    INDEX idx_created_at (created_at)
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    original_url TEXT NOT NULL,
+    short_code TEXT UNIQUE NOT NULL,
+    created_at TEXT NOT NULL,
+    expires_at TEXT,
+    clicks INTEGER DEFAULT 0
 );
+
+CREATE INDEX IF NOT EXISTS idx_short_code ON urls(short_code);
+CREATE INDEX IF NOT EXISTS idx_created_at ON urls(created_at);

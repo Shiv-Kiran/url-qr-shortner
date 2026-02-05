@@ -5,12 +5,12 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/Shiv-Kiran/url-qr-shortner/internal/config"
+	"github.com/Shiv-Kiran/url-qr-shortner/internal/database"
+	"github.com/Shiv-Kiran/url-qr-shortner/internal/handlers"
+	"github.com/Shiv-Kiran/url-qr-shortner/internal/services"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
-	"github.com/yourusername/url-qr-shortner/internal/config"
-	"github.com/yourusername/url-qr-shortner/internal/database"
-	"github.com/yourusername/url-qr-shortner/internal/handlers"
-	"github.com/yourusername/url-qr-shortner/internal/services"
 )
 
 func main() {

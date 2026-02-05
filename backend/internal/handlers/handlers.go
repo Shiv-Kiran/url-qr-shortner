@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/gorilla/mux"
 	"github.com/Shiv-Kiran/url-qr-shortner/internal/database"
-	"github.com/yourusername/url-qr-shortner/internal/services"
+	"github.com/Shiv-Kiran/url-qr-shortner/internal/services"
+	"github.com/gorilla/mux"
 )
 
 // HandleHome serves a simple home page

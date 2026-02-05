@@ -14,8 +14,8 @@ type Config struct {
 func Load() Config {
 	return Config{
 		Port:     getEnv("PORT", "8080"),
-		DBDriver: getEnv("DB_DRIVER", "mysql"),
-		DBDSN:    getEnv("DB_DSN", "user:password@tcp(localhost:3306)/url_shortener"),
+		DBDriver: getEnv("DB_DRIVER", "sqlite3"),
+		DBDSN:    getEnv("DB_DSN", "url_shortener.db"),
 	}
 }
 

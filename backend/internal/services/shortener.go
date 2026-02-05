@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/yourusername/url-qr-shortner/internal/database"
-	"github.com/yourusername/url-qr-shortner/internal/models"
+	"github.com/Shiv-Kiran/url-qr-shortner/internal/database"
+	"github.com/Shiv-Kiran/url-qr-shortner/internal/models"
 )
 
 const (
