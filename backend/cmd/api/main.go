@@ -32,6 +32,7 @@ func main() {
 	api := router.PathPrefix("/api/v1").Subrouter()
 	api.HandleFunc("/urls", handlers.HandleCreateURL).Methods("POST")
 	api.HandleFunc("/urls/{shortCode}", handlers.HandleGetURL).Methods("GET")
+	api.HandleFunc("/urls/{shortCode}/qr", handlers.HandleGetQRCode).Methods("GET")
 
 	// Redirect route
 	router.HandleFunc("/{shortCode}", handlers.HandleRedirect).Methods("GET")
