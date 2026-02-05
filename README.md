@@ -1,7 +1,35 @@
 # url-qr-shortner
 
- This is my deep dive into little things in websites. 
+A learning-focused URL shortener that now supports SQLite persistence and customizable QR code generation.
 
- Starting simple: shorten URLs, generate customizable QR codes with different error correction levels, add custom aliases with proper validation. Then leveling up with analytics—tracking total clicks, unique visitors, geographic data, referrer sources, time patterns, device/browser detection, even cookie identification for return visitors and fingerprint for device change.
+## Current Features
 
- I want to experiment with every storage type (memory, cookies, local storage, session storage, IndexedDB, server databases) to see what persists through refreshes, tab closes, or device switches. Eventually adding URL management features like editing destinations, expiration dates, password protection, Open Graph previews... then the advanced stuff: link bundles, A/B testing, UTM builders, branded domains, and a full API. It's a learning project that keeps expanding.
+- Short URL creation with random short codes
+- Redirect by short code
+- Click counter persistence in SQLite
+- In-memory cache for hot short codes
+- QR code generation on URL creation
+- QR customization:
+  - Error correction level: `L`, `M`, `Q`, `H`
+  - Size range: `128` to `1024` px
+
+## API Endpoints
+
+- `POST /api/v1/urls`
+  - Body:
+    ```json
+    {
+      "original_url": "https://example.com",
+      "qr_error_correction": "M",
+      "qr_size": 256
+    }
+    ```
+- `GET /api/v1/urls/{shortCode}`
+- `GET /api/v1/urls/{shortCode}/qr?level=Q&size=320`
+- `GET /{shortCode}`
+
+## Project Goal
+
+This project is a sandbox for understanding routing, ID generation, persistence, analytics, and eventually advanced link-management features.
+
+See `SETUP.md` for local setup and deployment notes.
