@@ -1,15 +1,16 @@
 <script>
+  import Page from './routes/+page.svelte';
 </script>
+
+<Page />
 
 <style global>
   :global(body) {
     margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
   }
 
-  :global(* ) {
+  :global(*) {
     box-sizing: border-box;
   }
 </style>
-
